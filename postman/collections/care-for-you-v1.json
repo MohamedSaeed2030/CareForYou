@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "b0a2cdd4-184f-4ac5-a0c1-405e702b6476",
+		"name": "care-for-you-v1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "25547165-b0a2cdd4-184f-4ac5-a0c1-405e702b6476"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "User_Authentication",
+					"item": [
+						{
+							"name": "user_login",
+							"id": "2b5f9d6c-f2d0-455a-9f3c-a73f8e7fd7f0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "password",
+										"value": "1234564",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "name",
+										"value": "ali",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"email\":\"user@gmail.com\",\n\"password\":\"123456\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://care-for-you-v1.000webhostapp.com/api/auth/login",
+									"protocol": "https",
+									"host": [
+										"care-for-you-v1",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "user@gmail.com",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "ali",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user_logout",
+							"id": "84d1a924-246f-41ee-b16b-4c7b9a5b767b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NhcmUtZm9yLXlvdS12MS4wMDB3ZWJob3N0YXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTY3OTYzNTI0OSwiZXhwIjoxNjc5NzIxNjQ5LCJuYmYiOjE2Nzk2MzUyNDksImp0aSI6IkMxMEdLUTJCUmdIVVRnbFYiLCJzdWIiOiIyMDUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NxyJE8pzQ1pwKut9s4oxUJ1Th8t-EkzT8-aqQCZUvaE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"email\":\"user@gmail.com\",\n\"password\":\"123456\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://care-for-you-v1.000webhostapp.com/api/auth/logout",
+									"protocol": "https",
+									"host": [
+										"care-for-you-v1",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user_Register",
+							"id": "f7491ec4-3f9d-4102-ac58-77c0db449901",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"name\" :\"medo\",\n\"email\":\"medo@gmail.com\",\n\"password\":\"123456\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://care-for-you-v1.000webhostapp.com/api/auth/register",
+									"protocol": "https",
+									"host": [
+										"care-for-you-v1",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "hozifa@gmail.com",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "hozifa",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh Token",
+							"id": "bbb72fba-06ca-4d4a-bb98-b525c95be98d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2Nzk1Nzc0MDUsImV4cCI6MTY3OTY2MzgwNSwibmJmIjoxNjc5NTc3NDA1LCJqdGkiOiJPbm40TGx4eWJMdWF0bUFiIiwic3ViIjoiMjEzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Vwlq0cmQIdwO_Vi63DZbx2yz5smGWb9UVBkDAN63RIY\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://care-for-you-v1.000webhostapp.com/api/auth/refresh",
+									"protocol": "https",
+									"host": [
+										"care-for-you-v1",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User_profile",
+							"id": "927546a3-aafd-45b3-a1c3-6704ce2a31db",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2Nzk2MzIyNjgsImV4cCI6MTY3OTcxODY2OCwibmJmIjoxNjc5NjMyMjY4LCJqdGkiOiI0WVM2ZnppVGFQUHBmRW1WIiwic3ViIjoiMjAxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Mhbb_G-Sbsiup5dRknP6Hpp-mjDktM1pNruJr_J57Gc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://care-for-you-v1.000webhostapp.com/api/auth/user-profile",
+									"protocol": "https",
+									"host": [
+										"care-for-you-v1",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"user-profile"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "5ece62cb-dfd1-4bd7-bd07-f6b192caeb60"
+				}
+			],
+			"id": "4a1f68cf-61ea-4430-89ce-85d8a29becd0"
+		},
+		{
+			"name": "Test token",
+			"item": [
+				{
+					"name": "Show _All_Users",
+					"id": "ffc9204d-d857-41cf-a33a-9802a6670147",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NhcmUtZm9yLXlvdS12MS4wMDB3ZWJob3N0YXBwLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTY3OTYzNTQwOCwiZXhwIjoxNjc5NzIxODA4LCJuYmYiOjE2Nzk2MzU0MDgsImp0aSI6InN1MUdEVjk5azFobzJiWlciLCJzdWIiOiIyMDUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.2wQsQwLLSulJmaGMfsRFfapXTfuq3knS1_9nRiWz3Yo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://care-for-you-v1.000webhostapp.com/api/users",
+							"protocol": "https",
+							"host": [
+								"care-for-you-v1",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "Accept",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "1c48c67c-2762-47d2-9740-0bb5b2a0e4eb"
+		}
+	]
+}
