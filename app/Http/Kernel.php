@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AssignGuard;
 use App\Http\Middleware\ChangeLanguage;
 use App\Http\Middleware\CheckAdminToken;
 use App\Http\Middleware\CheckPassword;
@@ -68,7 +69,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'checkPassword' => CheckPassword::class,
         'changeLanguage' => ChangeLanguage::class,
-        'checkAdminToken' => CheckAdminToken::class,
-
+        //'checkAdminToken' => CheckAdminToken::class,
+        'auth.guard' => AssignGuard::class,
+        'jwt.verify' => \App\Http\Middleware\JwtMiddleware::class,
     ];
 }

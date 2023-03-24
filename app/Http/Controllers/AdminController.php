@@ -25,7 +25,7 @@ class AdminController extends Controller
                 'password' => 'required',
             ];
 
-            $validator = Validator::make($request->all(), $rules);
+            $validator = Validator::make($request->header(), $rules);
 
             if ($validator->fails()) {
                 $code = $this->returnCodeAccordingToInput($validator);
